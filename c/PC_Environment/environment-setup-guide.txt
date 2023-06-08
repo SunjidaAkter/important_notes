@@ -1,0 +1,12 @@
+VS Code and Compiler Setup Issue Resolved
+যদি তোমার VS Code এবং কম্পাইলার সেটআপ ঠিকমতো হয়ে থাকে তাহলে এই পোস্ট ইগনোর করো। গিটহাব ইস্যু হলেও ইগনোর করো।
+এটা শুধুমাত্র তাদের জন্য যাদের উইন্ডোজ এ কম্পাইলার এবং VS Code সেটআপ করতে ঝামেলা হচ্ছে এবং কোড রান হচ্ছে না Setup মডিউল ফলো করার পরেও। অনেকের সমস্যা দেখার পর আমরা একটা সলিউশন এ আসতে পেরেছি, তোমাদের একটা ভিডিও ইন্সট্রাকশন দেওয়া হয়েছে কিভাবে সল্ভ করে নিতে পারবে। তারপরও যদি কোড রান না হয় তাহলে কি করবে সেটাও বলা আছে।
+Settings.json Doc Link: https://docs.google.com/.../161MPPoK2w8yBsIrLn7vX.../edit...
+MinGW Drive Link: https://drive.google.com/.../1DNi19ocKwHWopyYCfTH.../view...
+
+jodi online theke minGW download korte na pari tahole ei drive link theke minGW download kora lagbe. ei link er khetre kichhu install korte hobe na. just ei zip folder ta k c drive e paste korte hobe, then extract korte hobe, then ei extract kora folder er bin er path copy kore environment variable er path er okhane paste kore dite hobe. 
+jodi lal batti jole thake tahole vs code er settings e gie compiler path likhe search dite hobe. then ekta input space asbe sekhaneo minGW er bin er path paste kore /gcc.exe likhe dite hobe. erokom ekta example pic ei folder e achhe
+
+এছাড়াও ম্যাক ইউজার দের যদি সেটআপ এ সমস্যা হয় তাহলে এই Youtube টিউটোরিয়াল টি দেখে সল্ভ করে নিতে পারো।
+MinGW and VS Code setup for mac: https://youtu.be/pljEKcWYlWg
+

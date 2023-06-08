@@ -1,0 +1,8 @@
+number of p : 1
+number of r : 2
+number of o : 1
+number of g : 2
+number of a : 1
+number of m : 2
+number of i : 1
+number of n : 1
