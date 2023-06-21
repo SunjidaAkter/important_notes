@@ -19,28 +19,6 @@ void print_normal(Node* head){
     }
     cout<<endl;
 }
-void delete_at_position(Node* head,int pos){
-    Node* tmp=head;
-    for(int i=1;i<=pos-1;i++){
-        tmp=tmp->next;
-    }
-    Node* deleteNode=tmp->next;
-    tmp->next=tmp->next->next;
-    tmp->next->prev=tmp;
-    delete deleteNode; 
-}
-void delete_at_tail(Node* &tail){
-    Node* deleteNode=tail;
-    tail=tail->prev;
-    tail->next=NULL;
-    delete deleteNode;
-}
-void delete_at_head(Node* &head){
-    Node* deleteNode=head;
-    head=head->next;
-    head->prev=NULL;
-    delete deleteNode;
-}
 void print_reverse(Node* tail){
     Node* tmp=tail;
     while(tmp!=NULL){
@@ -48,6 +26,17 @@ void print_reverse(Node* tail){
         tmp=tmp->prev;
     }
     cout<<endl;
+}
+void insert_at_position(Node* head,int pos, int v){
+    Node* newNode=new Node(v);
+    Node* tmp=head;
+    for(int i=1;i<=pos-1;i++){
+        tmp=tmp->next;
+    }
+    newNode->next=tmp->next;
+    tmp->next=newNode;
+    newNode->next->prev=newNode;
+    newNode->prev=tmp;
 }
 int size(Node* head){
     Node* tmp=head;
@@ -58,31 +47,37 @@ int size(Node* head){
     }
     return cnt;
 }
-
-int main(){
-    // Node* head=NULL;
-    // Node* tail=NULL;
-    Node* head=new Node(10);
-    Node* a=new Node(20);
-    Node* b=new Node(30);
-    Node* c=new Node(40);
-    Node* tail=c;
-    head->next=a;
-    a->prev=head;
-    a->next=b;
-    b->prev=a;
-    b->next=c;
-    c->prev=b;
-    int pos;cin>>pos;
-    if(pos==0){
-        delete_at_head(head);
-    }else if(pos==size(head)-1){
-        delete_at_tail(tail);
-    }else if(pos>=size(head)){
-        cout<<"Invalid"<<endl;
-    }else{
-        delete_at_position(head,pos); 
+void insert_at_head(Node* &head,Node* &tail,int v){
+    Node* newNode=new Node(v);
+    if(head==NULL){
+        head=newNode;
+        tail=newNode;
+        return;
     }
+    newNode->next=head;
+    head->prev=newNode;
+    head=newNode;
+}
+void insert_at_tail(Node* &head,Node* &tail,int v){
+    Node* newNode=new Node(v);
+    if(tail==NULL){
+        head=newNode;
+        tail=newNode;
+        return;
+    }
+    tail->next=newNode;
+    newNode->prev=tail;
+    tail=newNode;
+}
+int main(){
+    Node* head=NULL;
+    Node* tail=NULL;
+    while(true){
+        int v;cin>>v;
+        if(v==-1)break;
+        insert_at_tail(head,tail,v);
+    }
+    
     print_normal(head);
     print_reverse(tail);
     return 0;
