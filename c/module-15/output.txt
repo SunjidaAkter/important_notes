@@ -1,2 +1,15 @@
-100 200 300 40 50 
-100 200 300 40 50 
+address of 0th index = 0061FF0C
+address of 0th index = 0061FF0C
+value of 0th index = 10
+value of 0th index = 10
+value of 0th index = 10
+address of 1th index = 0061FF10
+address of 1th index = 0061FF10
+value of 1th index = 20
+value of 1th index = 20
+value of 1th index = 20
+address of 2th index = 0061FF14
+address of 2th index = 0061FF14
+value of 2th index = 30
+value of 2th index = 30
+value of 2th index = 30
