@@ -11,11 +11,11 @@ class Node{
         this->right=NULL;
     }    
 };
-void pre_order_revarsal(Node* root){
+void post_order_revarsal(Node* root){
     if(root==NULL)return;
+    post_order_revarsal(root->left);
+    post_order_revarsal(root->right);
     cout<<root->val<<endl;
-    pre_order_revarsal(root->left);
-    pre_order_revarsal(root->right);
 }
 int main(){
     Node* root=new Node(10);
@@ -37,7 +37,7 @@ int main(){
     d->left=f;
     d->right=g;
     h->right=i;
-    pre_order_revarsal(root);
-    //* 10 20 40 60 90 100 30 50 70 80
+    post_order_revarsal(root);
+    //* 60 40 100 90 20 70 80 50 30 10
     return 0;
 }
