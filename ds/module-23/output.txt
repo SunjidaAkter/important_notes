@@ -1,10 +1,6 @@
-i
-am
-sunjida
-akter
-monika
-akter 1
-am 1
-i 1
-monika 1
-sunjida 1
+1 1
+2 2
+duplicate present
+3 1
+4 1
+4
