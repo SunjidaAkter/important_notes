@@ -12,7 +12,8 @@ int main(){
         }else if(a==2){
             s.erase(b);
         }else if(a==3){
-            // s.top();
+            if(s.count(b))cout<<"Yes"<<endl;
+            else cout<<"No"<<endl;
         }
     }
     return 0;

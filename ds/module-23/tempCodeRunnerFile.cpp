@@ -1,3 +1,3 @@
-f(i.second>1){
-            cout<<"duplicate present";
-        }
+n();it!=s.end();it++){
+        cout<<*it<<endl;
+    }
