@@ -15,8 +15,8 @@ int main(){
     }else{
         cout<<"no"<<endl;
     }
-    // for(auto it=s.begin();it!=s.end();it++){
-    //     cout<<*it<<endl;
-    // }
+    for(auto it=s.begin();it!=s.end();it++){
+        cout<<*it<<endl;
+    }
     return 0;
 }
