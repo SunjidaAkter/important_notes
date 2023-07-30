@@ -40,7 +40,7 @@ Node* input_tree(){
     }
     return root;
 }
-void level_order_taversal(Node* root){
+void level_order_traversal(Node* root){
     if(root==NULL){
         cout<<"no tree!";
         return;
@@ -81,6 +81,6 @@ int main(){
     Node* root=input_tree();
     int x;cin>>x;
     insert(root,x);
-    level_order_taversal(root);
+    level_order_traversal(root);
     return 0;
 }
