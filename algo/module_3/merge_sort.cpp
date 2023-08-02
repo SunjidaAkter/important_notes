@@ -8,7 +8,7 @@ void merge(int s,int e,int mid){
     int start_size=mid-s+1;
     int S[start_size+1];
     
-    int end_size=e-(mid+1)-1;
+    int end_size=e-(mid+1)+1;
     int E[end_size+1];
 
     for(int i=s,j=0;i<=mid;i++,j++){
@@ -16,6 +16,20 @@ void merge(int s,int e,int mid){
     }
     for(int i=mid+1,j=0;i<=e;i++,j++){
         E[j]=nums[i];
+    }
+
+    S[start_size]=INT_MAX;
+    E[end_size]=INT_MAX;
+
+    int sp=0,ep=0;
+    for(int i=s;i<=e;i++){
+        if(S[sp]<=E[ep]){
+            nums[i]=S[sp];
+            sp++;
+        }else{
+            nums[i]=E[ep];
+            ep++;
+        }
     }
 }
 void mergeSort(int s,int e){
