@@ -73,7 +73,7 @@ void insert(Node* &root ,int x){
         if(root->right==NULL){
             root->right=new Node(x);
         }else{
-            insert(root->left,x);
+            insert(root->right,x);
         }
     }
 }
