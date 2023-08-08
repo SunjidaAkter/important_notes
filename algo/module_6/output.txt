@@ -22,3 +22,15 @@ depth of node 9 is: 2
 depth of node 10 is: 1
 depth of node 11 is: 2
 depth of node 12 is: 2
+height of node 1 is: 4
+height of node 2 is: 3
+height of node 3 is: 1
+height of node 4 is: 0
+height of node 5 is: 2
+height of node 6 is: 1
+height of node 7 is: 0
+height of node 8 is: 0
+height of node 9 is: 0
+height of node 10 is: 1
+height of node 11 is: 0
+height of node 12 is: 0
