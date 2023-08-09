@@ -5,16 +5,22 @@ const int N=1e3+5;
 vector<int>adj[N];
 int level[N];
 int visited[N];
+void dfs(int u){
+    visited[u]=true;
+    for(int v:adj[u]){
+        if(visited[v])continue;
+        dfs(v);
+    }
+}
 void bfs(int s){
     queue<int>q;
     q.push(s);
     visited[s]=true;
+    level[s]=0;
     while(!q.empty()){
         //*pop a node from the queue and insert unvisited neighbors of that node
         int u=q.front();
         q.pop();
-        visited[s]=true;
-        level[s]=0;
         //*section 1: a node is being processed
         for(int v:adj[u]){
             //*section 2: child processing
@@ -34,9 +40,12 @@ int main(){
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
-    bfs(1);
+    int cc=0;
     for(int i=1;i<=n;i++){
-        cout<<"Level of "<<i<<": "<<level[i]<<endl;
+        if(visited[i])continue;
+        dfs(i);
+        cc++;
     }
+    cout<<"Number of connected components: "<<cc<<endl;
     return 0;
 }
