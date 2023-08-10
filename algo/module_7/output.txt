@@ -1,1 +1,3 @@
-Cycle detected
+1th component: 1 2 3 4 5 
+2th component: 6 7 8 
+Number of connected components: 2

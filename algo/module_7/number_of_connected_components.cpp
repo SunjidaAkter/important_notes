@@ -18,6 +18,7 @@ void dfs(int u){
 void bfs(int s){
     queue<int>q;
     q.push(s);
+    q1.insert(s);
     visited[s]=true;
     level[s]=0;
     while(!q.empty()){
@@ -30,7 +31,7 @@ void bfs(int s){
             //*section 2: child processing
             if(visited[v])continue;
             q.push(v);
-            // q1.push(v);
+            q1.insert(v);
             visited[v]=true;
             level[v]=level[u]+1;
             //*section 3: child processing
@@ -48,7 +49,8 @@ int main(){
     int cc=0;
     for(int i=1;i<=n;i++){
         if(visited[i])continue;
-        dfs(i);
+        bfs(i);
+        // dfs(i);
         cc++;
         cout<<cc<<"th component: ";
         while(!q1.empty()){
