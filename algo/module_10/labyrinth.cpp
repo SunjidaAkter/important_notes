@@ -61,6 +61,7 @@ int main(){
         }
         reverse(path.begin(),path.end());
         for(int i=1;i<path.size();i++){
+            
             if(path[i-1].first==path[i].first){
                 if(path[i-1].second==path[i].second-1){
                     cout<<"R";
