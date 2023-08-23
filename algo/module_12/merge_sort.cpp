@@ -43,15 +43,15 @@ void merge_sort(int a[],int l,int r){
         merge_sort(a,l,mid);
         merge_sort(a,mid+1,r);
         merge(a,l,mid,r);
-        // cout<<"This"<<endl;
-        // for(int i=l;i<=mid;i++){
-        //     cout<<a[i]<<" ";
-        // }
-        // cout<<endl;
-        // for(int i=mid+1;i<=r;i++){
-        //     cout<<a[i]<<" ";
-        // }
-        // cout<<endl;
+        cout<<"This"<<endl;
+        for(int i=l;i<=mid;i++){
+            cout<<a[i]<<" ";
+        }
+        cout<<endl;
+        for(int i=mid+1;i<=r;i++){
+            cout<<a[i]<<" ";
+        }
+        cout<<endl;
     }
 }
 int main(){
@@ -67,3 +67,41 @@ int main(){
     }
     return 0;
 }
+//output without merge
+/*
+This
+15 
+4 
+This
+15 4 
+3 
+This
+9 
+2 
+This
+9 2 
+8 
+This
+15 4 3 
+9 2 8 
+15 4 3 9 2 8 
+*/
+//output after merge
+/*
+This
+4 
+15 
+This
+3 4 
+15 
+This
+2 
+9 
+This
+2 8 
+9 
+This
+2 3 4 
+8 9 15 
+2 3 4 8 9 15 
+*/
