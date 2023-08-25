@@ -3,6 +3,7 @@ using namespace std;
 const int N=1e5+5;
 vector<pair<int,int>>v[N];
 int dis[N];
+bool vis[N];
 void dijkstra(int s){
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
     pq.push({0,s});
@@ -10,8 +11,10 @@ void dijkstra(int s){
     while(!pq.empty()){
         pair<int,int> parent = pq.top();
         pq.pop();
-        int parentCost=parent.first;
         int parentNode=parent.second;
+        if(vis[parentNode])continue;
+        vis[parentNode]=true;
+        int parentCost=parent.first;
         for(int i=0;i<v[parentNode].size();i++){
             pair<int ,int>child=v[parentNode][i];
             int childNode=child.first;
@@ -23,7 +26,7 @@ void dijkstra(int s){
         }
     }
 }
-//*O(|N|X|E|)
+//*O(|N|+|E|log|N|)
 int main(){
     int n,e;
     cin>>n>>e;
