@@ -41,3 +41,15 @@ int main(){
     }
     return 0;
 }
+//* O(|N-1|X|E|)
+//input
+// 4 4
+// 1 2 5
+// 2 3 2
+// 3 4 -2
+// 1 4 10
+//output
+// Node 1: 0
+// Node 2: 5
+// Node 3: 7
+// Node 4: 5
