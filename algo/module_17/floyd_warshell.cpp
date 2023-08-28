@@ -16,7 +16,7 @@ int main(){
     }
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
-            if(dis[i][j]==N)cout<<"INF"<<" ";
+            if(dis[i][j]==N)cout<<"∝"<<" ";
             else cout <<dis[i][j]<<" ";
         }
         cout<<endl;
@@ -30,13 +30,33 @@ int main(){
             }
         }
     }
-    cout<<"next"<<endl;
+    cout<<"updated"<<endl;
+    bool flag=false;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
-            if(dis[i][j]==N)cout<<"INF"<<" ";
-            else cout <<dis[i][j]<<" ";
+            if((i==j)&& dis[i][j]<0){
+                cout<<"Cycle detected!"<<endl;
+                flag=true;
+                break;
+            }else{
+                if(dis[i][j]==N)cout<<"INF"<<" ";
+                else cout <<dis[i][j]<<" ";
+            }
         }
-        cout<<endl;
+        if(flag)break;
+        else cout<<endl;
     }
     return 0;
 }
+//*input
+// 3 3
+// 1 2 -1
+// 2 3 2
+// 3 1 -5
+//* output
+// 0 -1 ∝ 
+// ∝ 0 2 
+// -5 ∝ 0 
+// updated
+// Cycle detected!
+
