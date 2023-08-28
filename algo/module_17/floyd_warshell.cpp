@@ -30,33 +30,13 @@ int main(){
             }
         }
     }
-    cout<<"updated"<<endl;
-    bool flag=false;
+    cout<<"next"<<endl;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
-            if((i==j)&& dis[i][j]<0){
-                cout<<"Cycle detected!"<<endl;
-                flag=true;
-                break;
-            }else{
-                if(dis[i][j]==N)cout<<"INF"<<" ";
-                else cout <<dis[i][j]<<" ";
-            }
+            if(dis[i][j]==N)cout<<"INF"<<" ";
+            else cout <<dis[i][j]<<" ";
         }
-        if(flag)break;
-        else cout<<endl;
+        cout<<endl;
     }
     return 0;
 }
-//*input
-// 3 3
-// 1 2 -1
-// 2 3 2
-// 3 1 -5
-//* output
-// 0 -1 ∝ 
-// ∝ 0 2 
-// -5 ∝ 0 
-// updated
-// Cycle detected!
-
