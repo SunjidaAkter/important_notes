@@ -36,6 +36,6 @@ int main(){
         int a,b;cin>>a>>b;
         dsu_union(a,b);
     }
-    dsu_find(5);
+    cout<<dsu_find(5);
     return 0;
 }
