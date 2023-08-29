@@ -2,9 +2,11 @@
 using namespace std;
 #define ll long long
 int parent[1000];
+int parentLevel[1000];
 void dsu_set(int n){
     for(int i=1;i<=n;i++){
         parent[i]=-1;
+        parentLevel[i]=1;
     }
 }
 int dsu_find(int n){
@@ -12,14 +14,21 @@ int dsu_find(int n){
         n=parent[n];
     }
     return n;
-}
+}//*O(logN)
 void dsu_union(int a,int b){
     int leaderA=dsu_find(a);
     int leaderB=dsu_find(b);
     if(leaderA!=leaderB){
-        parent[leaderB]=leaderA;
+        if(parentLevel[leaderA]>parentLevel[leaderB]){
+            //*A leader
+            parent[leaderB]=leaderA;
+            // parentLevel[leaderA]+=parentLevel[leaderB];
+        }else{
+            parent[leaderA]=leaderB;
+            parentLevel[leaderA]++;
+        }
     }
-}
+}//*O(4)
 int main(){
     int n,e;cin>>n>>e;
     dsu_set(n);
@@ -27,6 +36,6 @@ int main(){
         int a,b;cin>>a>>b;
         dsu_union(a,b);
     }
-    cout<<dsu_find(5);
+    cout<<dsu_find(2);
     return 0;
 }
