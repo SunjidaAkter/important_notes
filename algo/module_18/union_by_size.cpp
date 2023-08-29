@@ -14,13 +14,12 @@ int dsu_find(int n){
         n=parent[n];
     }
     return n;
-}//*O(logN)
+}
 void dsu_union(int a,int b){
     int leaderA=dsu_find(a);
     int leaderB=dsu_find(b);
     if(leaderA!=leaderB){
         if(parentSize[leaderA]>parentSize[leaderB]){
-            //*A leader
             parent[leaderB]=leaderA;
             parentSize[leaderA]+=parentSize[leaderB];
         }else{
@@ -28,7 +27,10 @@ void dsu_union(int a,int b){
             parentSize[leaderB]+=parentSize[leaderA];
         }
     }
-}//*O(4)
+}
+//*A leader
+//*O(logN)
+//*O(4)
 int main(){
     int n,e;cin>>n>>e;
     dsu_set(n);
