@@ -14,7 +14,7 @@ int dsu_find(int n){
         n=parent[n];
     }
     return n;
-}//*O(logN)
+}
 void dsu_union(int a,int b){
     int leaderA=dsu_find(a);
     int leaderB=dsu_find(b);
@@ -28,7 +28,9 @@ void dsu_union(int a,int b){
             parentLevel[leaderA]++;
         }
     }
-}//*O(4)
+}
+//*O(logN)
+//*O(4)
 int main(){
     int n,e;cin>>n>>e;
     dsu_set(n);
