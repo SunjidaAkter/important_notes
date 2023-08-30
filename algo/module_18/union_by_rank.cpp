@@ -21,10 +21,11 @@ void dsu_union(int a,int b){
     if(leaderA!=leaderB){
         if(parentLevel[leaderA]>parentLevel[leaderB]){
             //*A leader
-            parent[leaderB]=leaderA;
             // parentLevel[leaderA]+=parentLevel[leaderB];
-        }else{
+        }else if(parentLevel[leaderA]<parentLevel[leaderB]){
             parent[leaderA]=leaderB;
+        }else{
+            parent[leaderB]=leaderA;
             parentLevel[leaderA]++;
         }
     }
@@ -38,6 +39,12 @@ int main(){
         int a,b;cin>>a>>b;
         dsu_union(a,b);
     }
-    cout<<dsu_find(2);
+    cout<<dsu_find(3);
     return 0;
 }
+//*input
+// 7 4
+// 1 2
+// 2 3
+// 4 5
+// 6 5
