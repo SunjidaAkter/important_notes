@@ -18,7 +18,7 @@ class Edge{
 class cmp{
    public:
    bool operator()(Edge a,Edge b){
-    return a.w<b.w;
+    return a.w>b.w;
    } 
 };
 void prims(int s){
@@ -26,17 +26,20 @@ void prims(int s){
     vector<Edge>EdgeList;
     pq.push(Edge(s,s,0));
     while(!pq.empty()){
-        Edge p=pq.top();
+        Edge parent=pq.top();
         pq.pop();
-        int a=p.a;
-        int b=p.b;
-        int w=p.w;
-        if(!vis[b])continue;
-        vis[b]=true;
-        EdgeList.push_back(p);
-        for(pii ch:v[b]){
-            
+        if(vis[parent.b])continue;
+        vis[parent.b]=true;
+        EdgeList.push_back(parent);
+        for(pii child:v[parent.b]){
+            if(!vis[child.first]){
+                pq.push(Edge(parent.b,child.first,child.second));
+            }
         }
+    }
+    EdgeList.erase(EdgeList.begin());
+    for(Edge val:EdgeList){
+        cout<<val.a<<" "<<val.b<<" "<<val.w<<endl;
     }
 }
 int main(){
