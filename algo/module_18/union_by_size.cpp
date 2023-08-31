@@ -38,6 +38,6 @@ int main(){
         int a,b;cin>>a>>b;
         dsu_union(a,b);
     }
-    cout<<dsu_find(6);
+    cout<<dsu_find(2);
     return 0;
 }

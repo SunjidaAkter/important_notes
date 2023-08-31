@@ -6,7 +6,7 @@ int parentLevel[1000];
 void dsu_set(int n){
     for(int i=1;i<=n;i++){
         parent[i]=-1;
-        parentLevel[i]=1;
+        parentLevel[i]=0;
     }
 }
 int dsu_find(int n){
@@ -21,7 +21,7 @@ void dsu_union(int a,int b){
     if(leaderA!=leaderB){
         if(parentLevel[leaderA]>parentLevel[leaderB]){
             //*A leader
-            // parentLevel[leaderA]+=parentLevel[leaderB];
+            parent[leaderB]=leaderA;
         }else if(parentLevel[leaderA]<parentLevel[leaderB]){
             parent[leaderA]=leaderB;
         }else{
