@@ -1,0 +1,1 @@
+{"name":"Local: frog_naive","url":"f:\\Projects\\Phitron\\important-notes\\algo\\module_21\\frog_naive.cpp","tests":[{"id":1693821852340,"input":"4\n10 30 40 20","output":"30"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Projects\\Phitron\\important-notes\\algo\\module_21\\frog_naive.cpp","group":"local","local":true}
