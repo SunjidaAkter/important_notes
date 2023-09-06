@@ -20,12 +20,6 @@ int main(){
     int a[n];
     for(int i=0;i<n;i++)cin>>a[i];
     int s;cin>>s;
-    // for(int i=0;i<=n;i++){
-    //     for(int j=0;j<=s;j++){
-    //         if(i==0 && j!=0)dp[i][j]=false;
-    //         if(i!=0 && j==0)dp[i][j]=true;
-    //     }
-    // }
     bool dp[n+1][s+1];
     dp[0][0]=true;
     for(int i=1;i<=s;i++){
@@ -40,7 +34,17 @@ int main(){
             }
         }
     }
-    if(dp[n][s]==true)cout<<"True";
-    else cout<<"False";
+    for(int i=0;i<=n;i++){
+        for(int j=0;j<=s;j++){
+            if(dp[i][j]){
+                cout<<"T"<<" ";
+            }else{
+                cout<<"F"<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    // if(dp[n][s]==true)cout<<"True";
+    // else cout<<"False";
     return 0;
 }
