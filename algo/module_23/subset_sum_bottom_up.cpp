@@ -2,7 +2,6 @@
 using namespace std;
 typedef pair<int,int>pii;
 #define ll long long
-bool dp[1005][1005];
 // bool subset_sum(int n,int a[],int s){
 //     if(n==0){
 //         if(s==0)return true;
@@ -21,12 +20,27 @@ int main(){
     int a[n];
     for(int i=0;i<n;i++)cin>>a[i];
     int s;cin>>s;
-    for(int i=0;i<=n;i++){
+    // for(int i=0;i<=n;i++){
+    //     for(int j=0;j<=s;j++){
+    //         if(i==0 && j!=0)dp[i][j]=false;
+    //         if(i!=0 && j==0)dp[i][j]=true;
+    //     }
+    // }
+    bool dp[n+1][s+1];
+    dp[0][0]=true;
+    for(int i=1;i<=s;i++){
+        dp[0][i]=false;
+    }
+    for(int i=1;i<=n;i++){
         for(int j=0;j<=s;j++){
-
+            if(a[i-1]<=j){
+                dp[i][j]=dp[i-1][j-a[i-1]]||dp[i-1][j];
+            }else{
+                dp[i][j]=dp[i-1][j];
+            }
         }
     }
-    // if(subset_sum(n,a,s))cout<<"True";
-    // else cout<<"False";
+    if(dp[n][s]==true)cout<<"True";
+    else cout<<"False";
     return 0;
 }
