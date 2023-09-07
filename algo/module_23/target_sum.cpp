@@ -25,5 +25,4 @@ int main(){
         cout<<dp[n][s];
     }else cout<<0;  
     return 0;
-    
 }
