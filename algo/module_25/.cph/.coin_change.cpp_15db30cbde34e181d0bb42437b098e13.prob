@@ -1,0 +1,1 @@
+{"name":"Local: coin_change","url":"f:\\Projects\\Phitron\\important-notes\\algo\\module_25\\coin_change.cpp","tests":[{"id":1694505749183,"input":"3\n1 2 3\n5","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Projects\\Phitron\\important-notes\\algo\\module_25\\coin_change.cpp","group":"local","local":true}
