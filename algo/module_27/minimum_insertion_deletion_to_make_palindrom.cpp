@@ -19,6 +19,7 @@ int main(){
            else dp[i][j]=max(dp[i-1][j],dp[i][j-1]); 
         }
     }
-    cout<<a.size()-dp[n][m];
+    cout<<"insertion : "<<a.size()-dp[n][m]<<endl;
+    cout<<"deletion : "<<a.size()-dp[n][m];
     return 0;
 }
