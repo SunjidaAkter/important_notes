@@ -16,4 +16,4 @@ int main(){
     cout<<s;
     return 0;
 }
-//normally akta ba duita n times one dimensional loop thakle oi programme er time complexity hobe O(n) [big o of n][big o notation]
+//* normally akta ba duita n times one dimensional loop thakle oi programme er time complexity hobe O(n) [big o of n][big o notation]
