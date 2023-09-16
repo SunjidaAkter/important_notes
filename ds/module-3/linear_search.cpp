@@ -20,3 +20,5 @@ int main(){
     }
     return 0;
 }
+
+//* linear search er time complexity may be O(n);
