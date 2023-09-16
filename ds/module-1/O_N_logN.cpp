@@ -13,6 +13,6 @@ int main(){
     }
     return 0;
 }
-//n times loop er vitor logN times loop cholse tai etar time complexity O(N*logN)
-// time 2sec thakle n=10^6 dea jabe
-// time 1sec thakle n=10^5 dea jabe
+//* n times loop er vitor logN times loop cholse tai etar time complexity O(N*logN)
+//* time 2sec thakle n=10^6 dea jabe
+//* time 1sec thakle n=10^5 dea jabe
