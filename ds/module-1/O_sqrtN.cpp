@@ -11,4 +11,4 @@ int main(){
     }
     return 0;
 }
-// ekhane loop ta root over of n times chalaise tai etar time complexity O(sqrt(N))
+//* ekhane loop ta root over of n times chalaise tai etar time complexity O(sqrt(N))
