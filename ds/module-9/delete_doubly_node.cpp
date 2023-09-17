@@ -68,8 +68,8 @@ int size(Node* head){
 }
 
 int main(){
-    // Node* head=NULL;
-    // Node* tail=NULL;
+    //* Node* head=NULL;
+    //* Node* tail=NULL;
     Node* head=new Node(10);
     Node* a=new Node(20);
     Node* b=new Node(30);
