@@ -3,7 +3,7 @@ using namespace std;
 int main(){
     list<int>myList={10,20,30};
     cout<<myList.max_size()<<endl;
-    //array er moto er alada kono capacity nai
+    //* array er moto er alada kono capacity nai
     cout<<myList.size()<<endl;
     myList.clear();
     cout<<myList.size()<<endl;
