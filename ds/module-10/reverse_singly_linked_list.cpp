@@ -35,7 +35,7 @@ void print_linked_list(Node* &head){
 }
 void reverse(Node* &head,Node* current){
     if(current->next==NULL){
-        head==current;
+        head=current;
         return;
     }
     reverse(head,current->next);
