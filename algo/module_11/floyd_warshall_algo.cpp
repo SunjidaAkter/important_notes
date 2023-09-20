@@ -21,7 +21,8 @@ void print_matrix(){
         cout<<endl;
     }
 }
-int main(){int m,n;
+int main(){
+    int m,n;
     cin>>n>>m;
     cout<<n;
     dist_initialize();
