@@ -1,0 +1,1 @@
+{"name":"Local: new","url":"f:\\Projects\\Phitron\\important-notes\\ds\\module-23\\new.cpp","tests":[{"id":1696005060876,"input":"6\n5 2 6 1 3 4\n3","output":"13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Projects\\Phitron\\important-notes\\ds\\module-23\\new.cpp","group":"local","local":true}
