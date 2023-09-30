@@ -18,7 +18,7 @@ int main(){
                 x=q.front();
                 mn=min(mn,x);
             }else{
-                // cout<<0<<" ";
+                
                 mn=min(mn,0);
             }
             if(a[i]<0)q.pop();
