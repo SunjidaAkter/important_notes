@@ -11,6 +11,7 @@ void dfs(int s){
         int child=v[s][i];
         if(visit[child]==false){
             dfs(child);
+            // cout<<"see"<<child/;
         }
     }
 }
