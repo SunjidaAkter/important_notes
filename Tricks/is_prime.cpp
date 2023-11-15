@@ -13,8 +13,7 @@ using namespace std;
 typedef pair<int,int>pii;
 #define forl(ty,var,str,end) for(ty var=str; var<end; var++)
 # define FAST ios_base :: sync_with_stdio (false) ; cin.tie(0) ; cout.tie(0)
-bool prime(int a)
-{
+bool prime(int a){
     if (a == 1 || a == 0)
         return false;
     for (int i=2; i*i <= a; i++)
