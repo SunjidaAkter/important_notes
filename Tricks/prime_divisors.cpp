@@ -30,7 +30,7 @@ vector<int> getprimefac(int n){
     return ans;
 }
 void solve(){
-    vector<int> ans=getprimefac(21);
+    vector<int> ans=getprimefac(28);
     for(auto val:ans)cout<<val<<" ";
 }
 int main(){
