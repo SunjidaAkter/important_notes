@@ -20,8 +20,22 @@ int gcd(int a, int b){
     }
     return a;
 }
+vector<int> sieve(int n){
+    int *a = new int[n + 1]();
+    vector<int> vect;
+    for (int i = 2; i <= n; i++){
+        if (a[i] == 0){
+            vect.push_back(i);
+            for (int j = i * i; j <= n; j += i){
+                a[j] = 1;
+            }
+        }
+    }
+    return vect;
+}
 void solve(){
-  cout<<gcd(3137, 9837632);  
+    vector<int>ans=sieve(15);
+  for(int v:ans)cout<<v<<" ";
 }
 int main(){
     FAST;

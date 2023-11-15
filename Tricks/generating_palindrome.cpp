@@ -20,8 +20,9 @@ void generatePalindromes(ll n) {
     } 
 } 
 int main(){
-    ll n=10e5;
+    ll n=10e10;
     generatePalindromes(n);
+    cout<<palindrome.size()<<" ";
     for(auto val:palindrome)cout<<val<<" ";
     return 0;
 }
