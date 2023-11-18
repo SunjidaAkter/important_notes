@@ -5,7 +5,7 @@ typedef pair<ll,ll>pii;
 #define forl(var,str,end) for(long long int var=str; var<end; var++)
 vector<int> getdiv(int n){
     vector<int> ans;
-    for (int i = 1; i * i <= n; i++){
+    for (int i = 2; i * i <= n; i++){
         if (n % i == 0){
             ans.push_back(i);
             if (n / i != i){
