@@ -12,7 +12,7 @@ int digits_number(int n){
     return sz;
 }
 int main(){
-    int n=2;
+    int n=4;
     cout<<digits_number(n);
     return 0;
 }
