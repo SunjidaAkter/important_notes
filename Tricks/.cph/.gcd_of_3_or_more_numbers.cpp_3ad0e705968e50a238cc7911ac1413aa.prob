@@ -1,0 +1,1 @@
+{"name":"Local: gcd_of_3_or_more_numbers","url":"f:\\Projects\\Phitron\\important-notes\\Tricks\\gcd_of_3_or_more_numbers.cpp","tests":[{"id":1702657756250,"input":"1\n3\n6 9 12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Projects\\Phitron\\important-notes\\Tricks\\gcd_of_3_or_more_numbers.cpp","group":"local","local":true}

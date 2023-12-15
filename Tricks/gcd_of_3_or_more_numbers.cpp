@@ -13,21 +13,22 @@ using namespace std;
 typedef pair<int,int>pii;
 #define forl(ty,var,str,end) for(ty var=str; var<end; var++)
 # define FAST ios_base :: sync_with_stdio (false) ; cin.tie(0) ; cout.tie(0)
-int gcd(int a, int b){
-    while (b){
-        a %= b;
-        swap(a, b);
+ll gcd(vector<ll>&a){
+    ll g=0;
+    for(int i=0;i<a.size();i++){
+        g=__gcd(g,a[i]);
     }
-    return a;
+    return g;
 }
-
 void solve(){
-    cout<<gcd(9,6)<<nl;
+    ll n;cin>>n;
+    vector<ll>a(n);
+    for(int i=0;i<n;i++)cin>>a[i];
+    cout<<gcd(a)<<nl;
 }
 int main(){
     FAST;
-    int t=1;
-    // cin>>t;
+    int t;cin>>t;
     while(t--){
         solve();
     }
