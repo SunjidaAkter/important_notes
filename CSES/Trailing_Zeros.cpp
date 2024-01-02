@@ -11,10 +11,12 @@ using namespace std;
 typedef pair<ll,ll>pii;
 void solve(){
     ll n,cnt=0;cin>>n;
-    ll x=1;
+    ll x=5;
     while(n>=x){
-        cnt+=(n/5);
+        cnt+=(n/x);
+        x*=5;
     }
+    cout<<cnt;
 }
 int main(){
     FAST;
