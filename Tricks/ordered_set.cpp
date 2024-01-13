@@ -36,6 +36,10 @@ void solve(){
         st2.erase(st2.begin());
     }
     cout<<nl;
+    for(ll i=0;i<n;i++){
+        st1.erase(a[i]);
+        cout<<st1.order_of_key(a[i])<<" ";
+    }
 }
 int main(){
     FAST;
