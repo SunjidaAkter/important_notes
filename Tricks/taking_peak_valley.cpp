@@ -15,8 +15,9 @@ typedef pair<int,int>pii;
 # define FAST ios_base :: sync_with_stdio (false) ; cin.tie(0) ; cout.tie(0)
 void solve(){
     int n;cin>>n;
-    int a[n];vector<int>ans;
+    int a[n];
     for(int i=0;i<n;i++)cin>>a[i];
+    vector<int>ans;
     bool flip=0;
     if(a[0]<a[1])flip=0;
     else flip=1;
