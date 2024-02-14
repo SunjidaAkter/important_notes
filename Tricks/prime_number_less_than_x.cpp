@@ -13,13 +13,13 @@ using namespace std;
 typedef pair<int,int>pii;
 #define forl(ty,var,str,end) for(ty var=str; var<end; var++)
 # define FAST ios_base :: sync_with_stdio (false) ; cin.tie(0) ; cout.tie(0)
-vector<int> sieve(int n){
-    int *a = new int[n + 1]();
-    vector<int> vect;
-    for (int i = 2; i <= n; i++){
+vector<ll> sieve(ll n){
+    ll *a = new ll[n + 1]();
+    vector<ll> vect;
+    for (ll i = 2; i <= n; i++){
         if (a[i] == 0){
             vect.push_back(i);
-            for (int j = i * i; j <= n; j += i){
+            for (ll j = i * i; j <= n; j += i){
                 a[j] = 1;
             }
         }
@@ -27,8 +27,9 @@ vector<int> sieve(int n){
     return vect;
 }
 void solve(){
-    vector<int>ans=sieve(15);
-    for(int v:ans)cout<<v<<" ";
+    vector<ll>ans=sieve(1000000);
+    for(ll v:ans)cout<<v<<" ";
+    cout<<ans.size();
 }
 int main(){
     FAST;
