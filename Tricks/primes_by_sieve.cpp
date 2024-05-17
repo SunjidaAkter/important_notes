@@ -10,7 +10,7 @@ using namespace std;
 #define FAST ios_base :: sync_with_stdio (false) ; cin.tie(0) ; cout.tie(0)
 typedef pair<ll,ll>pii;
 void solve(){
-    ll n=10;
+    ll n=1e7;
     vector<bool>prime(n+1);
     for(ll i=2;i*i<=n;i++){
         if(!prime[i]){
@@ -19,12 +19,14 @@ void solve(){
             }
         }
     }
+    ll cnt=0;
     for(ll i=2;i<=n;i++){
         if(!prime[i]){
             cout<<i<<" ";
+            cnt++;
         }
     }
-    cout<<nl;
+    cout<<cnt<<nl;
 }
 int main(){
     FAST;
