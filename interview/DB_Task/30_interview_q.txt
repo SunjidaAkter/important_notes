@@ -1,0 +1,141 @@
+* Differences between Data and Information
+
+Data are raw facts without any context. On the contrary, pieces of information are processed data with meaning. 
+
+* Explain the types of databases.
+
+    There are many kinds of databases but the common types are :  
+        Relational Database: Data are stored here in the table and relationships are maintained. (e.g. MySQL, Postgres)
+        NoSQL Database: Data are stored here without any structure. (e.g. MongoDB)
+        Distributed Database: Data are distributed here across different locations.
+        Cloud Database: Data are hosted here in the cloud platform. (e.g. AWS)
+
+* What is DBMS?
+
+    DBMS(Data Base Management System) is a software where we can store and manage data. 
+
+* What is RDBMS?
+
+    RDBMS(Relational Data Base Management System) is also a software where we can store and manage databases in the table in a more structured way. 
+
+* Differences between DBMS and RDBMS.
+
+    In a database management system data aren’t stored in the table and don’t maintain any relationship. On the other hand, in a relational database management system data are stored in the table and relationships are maintained. 
+
+* Use cases of DBMS and RDBMS.
+
+    For Single user applications or file based system we should use DBMS and for multi user application and complex systems like Bank management, we should use RDBMS.
+
+* What is SQL?
+
+    SQL(Structured Query Language) is a language to maintain and manipulate relational database.
+
+* What is NoSQL?
+
+    NoSQL refers to database that stores data in formats other than table, like documents or key value pairs.
+
+* Differences between SQL and NoSQL
+
+	SQL: structured, uses table, maintain relationship.
+	NoSQL: unstructured, flexibleschemas, doesn’t maintain relationship.
+
+* Use cases of SQL and NoSQL
+
+    SQL : We should use SQL where we need to manage data in more structured way (e.g. Banking System )
+    NoSQL : We should use NoSQL where we need to manage data in more flexible way (e.g. Social Media )
+
+* What is MySQL 
+
+    MySQL is an open source rational database management system that uses SQL
+
+* Differences between SQL and MySQL
+	
+    SQL is a language that manages rational data and MySQL is a relational database management system that uses SQL
+
+* What is key?
+
+	Key is a field that identifies records in a table.
+
+* What is the Primary Key?
+
+	Primary key is a unique field that identifies each record in a table.
+
+* What is Foreign Key?
+
+	Foreign Key is field linking two table by referencing the primary key of another table.
+
+* What is a Unique Key?
+
+    A unique key is a field or set of fields that ensures all values in a column are unique. Unlike primary key it can contain null value. 
+
+* What is Candidate Key?
+
+    A candidate key is a field or combination of fields that uniquely identifies each records in a table. It is a candidate for primary key.
+
+* What is Composite Key?
+
+    A combination of two or more columns to create a unique key when a single column is not sufficient.
+
+* Differences between Composite key and Foreign key
+
+    Composite Key: Used to link records from one table to another by referencing a primary key.
+    Foreign Key:  Used to link records from one table to another by referencing a primary key.
+
+* Types of relation in SQL
+
+    One-to-One
+    One-to-Many
+    Many-to-Many
+
+
+* Explain one-to-one relation
+
+	Each record in one table is related to only one record in another table.
+
+* Explain one-to-many relation
+
+	Each record in one table is related to multiple records in another table.
+
+* Explain many-to-many relation
+
+	Multiple records in one table are related to multiple records in another table.
+
+* What are the common types of SQL 
+
+	DQL(Data Query Language)
+	DDL(Data Definition Language)
+	DML(Data Manipulation Language)
+	DCL(Data Control Language)	
+
+* What is DQl?
+
+	A subset of SQL is used to query and retrieve data. Example: SELECT.
+
+* What is DCL?
+
+	A subset of SQL that is used to manage permissions in the database. Examples: GRANT.
+
+* What is DDL?
+
+    A subset of SQL is used to define and modify the database structure. Examples: CREATE
+
+* What DML?
+
+    A subset of SQL that is used to manage data within tables. Examples: INSERT
+
+* Different types of RDBMS
+
+    MySQL, PostgreSQL, Oracle, SQL Server, and SQLite are popular RDBMS that support SQL-based queries for relational data.
+
+* What is SQL insection?
+
+    SQL Injection is a type of security vulnerability where an attacker can insert malicious SQL code into an application's input fields, which gets executed on the database
+
+* What is WHERE clause?
+* What is Having clause?
+* What is JOIN in SQL?
+* Explain different kinds of JOIN query?
+* What is Data constraints?
+* What are some common clauses used with SELECT query in SQL?
+
+
