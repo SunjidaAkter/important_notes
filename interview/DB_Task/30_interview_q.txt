@@ -1,6 +1,6 @@
 * Differences between Data and Information
 
-Data are raw facts without any context. On the contrary, pieces of information are processed data with meaning. 
+    Data are raw facts without any context. On the contrary, pieces of information are processed data with meaning. 
 
 * Explain the types of databases.
 
